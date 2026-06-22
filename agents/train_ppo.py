@@ -1,7 +1,7 @@
 # agents/train_ppo.py
 
 ##################################################
-###### Copyright (c) 2026 jzjzzzzzzz
+###### Copyright (c) 2026 Project contributors
 ###### All rights reserved.
 ##################################################
 
