@@ -1,28 +1,40 @@
 # Algae Growth RL Prediction
 
-This project uses Reinforcement Learning (RL) to simulate and optimize algae growth under varying environmental conditions. By adjusting factors such as light intensity, nutrient levels, ultrasound exposure, and trace element concentration, the goal is to predict and improve algae growth over time.
+Python research sandbox for simulating algae growth and training a reinforcement-learning controller. The custom Gymnasium environment models light, nutrient level, temperature drift, ultrasound exposure, and trace elements; a PPO agent can learn action settings that maximize simulated growth.
 
-## Key Features:
+## Project Structure
 
-Environment Simulation: Uses RL algorithms to model how environmental parameters affect algae growth.
-Optimization: Trains an RL agent to optimize algae growth by adjusting environmental factors.
-Prediction: Provides growth predictions based on learned data.
+- `env/algae_env.py`: Gymnasium environment used by training and tests.
+- `agents/train_ppo.py`: PPO training script using Stable-Baselines3.
+- `utils/plot_utils.py`: plotting helper for growth and factor histories.
+- `tests/test_env.py`: manual environment smoke test.
+- `quick_algae_report.csv`, `algae_result.png`: generated experiment outputs kept as reference artifacts.
 
-## Objective
+## Setup
 
-The aim of this project is to train an RL agent that learns to maximize algae growth by interacting with the environment. Through optimization, the agent identifies the best combination of factors to boost growth, making this an important tool for studying sustainable algae cultivation.
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+```
 
-## Installation
+On Windows, use `.venv\Scripts\python.exe` instead of `.venv/bin/python`.
 
-To get started, you will need to install the necessary dependencies listed in the project’s requirements.txt file. This will ensure all necessary libraries are available to run the project.
+## Run
 
-## Usage
+Train and plot a quick PPO run:
 
-Once the environment is set up, the agent can be trained and tested to predict the growth of algae in response to various environmental conditions.
+```bash
+.venv/bin/python agents/train_ppo.py
+```
 
-## License
+Run the environment smoke test:
 
-Copyright (c) 2026 
-jzjzzzzzzz
+```bash
+.venv/bin/python tests/test_env.py
+```
 
-All rights reserved.
+## Notes
+
+- Training requires `torch`, `gymnasium`, and `stable-baselines3`.
+- The growth model is a simplified simulation, not a validated biological model.
+- Keep large local virtual environments and regenerated scratch outputs out of git.

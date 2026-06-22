@@ -14,3 +14,6 @@ venv/
 .vscode/
 .DS_Store
 Thumbs.db
+
+env_windows_bak/
+test_algae_growth.png
