@@ -1,3 +1,12 @@
+> [!IMPORTANT]
+> **Archived on 2026-08-15.** Maintained simulation, RL, experiment, and analysis
+> work has moved to
+> [Algae Research Toolkit](https://github.com/jzjzzzzzzz/algae-research-toolkit).
+> This repository remains intact as a read-only historical record. See the
+> [migration guide](https://github.com/jzjzzzzzzz/algae-research-toolkit/blob/main/MIGRATION.md).
+
+---
+
 # Algae Growth RL Prediction
 
 Python research sandbox for simulating algae growth and training a reinforcement-learning controller. The custom Gymnasium environment models light, nutrient level, temperature drift, ultrasound exposure, and trace elements; a PPO agent can learn action settings that maximize simulated growth.
